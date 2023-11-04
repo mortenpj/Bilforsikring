@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@fremtind/jkl-core/core";
+
+// Bruk Jøkuls mixins, funksjoner og variabler via jkl-modulen.
+@use "@fremtind/jkl-core/jkl";
+
+
+@font-face {
+  font-family: "Profilfont";
+  src: url("assets/Profilfont-Regular-Web.woff2") format("woff2"),
+  url("assets/Profilfont-Regular-Web.woff") format("woff");
+}
+
+body {
+  font-family: 'Profilfont', sans-serif;
+    padding: 40px;
+    background-color: #f4f2ef;
+    box-shadow: -11vw 0 #f4f2ef, 11vw 0 #f4f2ef, -25vw 0 #f4f2ef, 25vw 0 #f4f2ef, -40vw 0 #f4f2ef, 40vw 0 #f4f2ef;
+}
+
+.width-100 {
+    width: 100% !important  ;
+}
+
+.invalid-text {
+    color: red
+}
+
+.form-group {
+    padding-top: 20px;
+}
