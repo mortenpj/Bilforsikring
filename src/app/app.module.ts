@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import {FormsModule} from "@angular/forms";
-import { CarInsuranceComponent } from './components/car-insurance/car-insurance.component';
-import {NgSelectModule} from "@ng-select/ng-select";
+import { CarInsuranceComponent } from './modules/portal/components/car-insurance/component/car-insurance.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import {NgSelectModule} from "@ng-select/ng-select";
         AppRoutingModule,
         NgbModule,
         NgOptimizedImage,
-        FormsModule,
-        NgSelectModule
+        FormsModule
 
     ],
   providers: [],

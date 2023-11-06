@@ -14,3 +14,24 @@ export interface Bonus {
     value: number,
     year: number
 }
+
+export interface CarInsurance {
+    id?: number,
+    insuranceOwner: InsuranceOwner,
+    bonus: Bonus;
+}
+
+export interface InsuranceOwner {
+    firstName: string,
+    lastName: string,
+    personalNumber: string,
+    email: string
+}
+
+export interface CarInsurancePost {
+
+}
+
+export interface InsuranceOwnerPost {
+
+}

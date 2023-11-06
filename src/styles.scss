@@ -2,6 +2,10 @@
 
 // Bruk Jøkuls mixins, funksjoner og variabler via jkl-modulen.
 @use "@fremtind/jkl-core/jkl";
+@use "@fremtind/jkl-icons/icons";
+@use "@fremtind/jkl-button/button";
+@use "@fremtind/jkl-select";
+@use "@fremtind/jkl-input-group/input-group";
 
 
 @font-face {
@@ -27,4 +31,8 @@ body {
 
 .form-group {
     padding-top: 20px;
+}
+
+button {
+
 }

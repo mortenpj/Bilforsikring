@@ -1,0 +1,74 @@
+<div class="width-100">
+<div class="jkl-title-small">Kjøp Bilforsikring</div>
+
+    <div class="info-text">
+        Det er fire forskjellige forsikringer å velge mellom.
+        Ansvarsforsikring er lovpålagt om kjøretøyet er registrert og skal
+        brukes på veien. I tillegg kan du utvide forsikringen avhengig av
+        hvor gammel bilen din er og hvordan du bruker den.
+    </div>
+
+    <div class="form-group col-12 clearfix jkl-spacing-16--top">
+        <label for="licenseplate" class="jkl-label--small">Bilens registreringsnummer</label>
+        <input id="licenseplate" class="form-control" [(ngModel)]="licensePlate" #licenseplate="ngModel" [required]="'true'" placeholder="E.g AB 12345" pattern="^([A-Z]{2}\s{1}[1-9]{1}[0-9]{4})$">
+
+        <small class="invalid-text" *ngIf="licenseplate?.touched && licenseplate?.invalid">
+            Bilens registreringsnummer er ikke gyldig
+        </small>
+    </div>
+
+    <div class="jkl-select jkl-spacing-16--top jkl-input-group">
+        <label for="bonus-select" class="jkl-label--small">Din bonus</label>
+        <div class="jkl-select__outer-wrapper">
+        <select class="jkl-select" id="bonus-select" [(ngModel)]="selectedBonus">
+            <option class="jkl-select__options-menu" *ngFor="let bonus of bonusValues" [value]="bonus">{{ bonus.name}}</option>
+        </select>
+        </div>
+    </div>
+
+<!--    <div class="col-12 clearfix">-->
+<!---->
+<!--        <select class="jkl-select jk-input-group jkl-sr-only" id="bonus-select" [(ngModel)]="selectedBonus">-->
+<!--            <option class="jkl-select__option-description" *ngFor="let bonus of bonusValues" [value]="bonus">{{ bonus.name}}</option>-->
+<!--        </select>-->
+<!--        <small class="jkl-form-support-label jkl-form-support-label&#45;&#45;help">Bonus er en rabattordning der vi belønner skadefri kjøring med lavere pris på forsikringen.<br>-->
+<!--            Har du ikke hatt forsikring før, er startbonus på 60%-->
+<!--        </small>-->
+<!--    </div>-->
+
+
+    <div class="form-group col-12 clearfix">
+        <label for="personal-number" class="jkl-label--small">Personnummer</label>
+        <input id="personal-number" class="form-control" [(ngModel)]="personalNumber" #personalnumber="ngModel" (ngModelChange)="personalNumberChange()" placeholder="11 siffer" [required]="'true'">
+
+        <small class="invalid-text" *ngIf="personalnumber?.touched && !isPersonalNumberValid">
+            Personnummer er ikke gyldig
+        </small>
+    </div>
+
+    <div class="width-100 clearfix">
+    <div class="form-group col-md-12 col-lg-6 float-start">
+        <label for="fornavn" class="jkl-label--small">Fornavn</label>
+        <input id="fornavn" class="form-control" [(ngModel)]="fornavn" #fornavnValidation="ngModel" placeholder="" [required]="'true'">
+    </div>
+
+    <div class="form-group col-md-12 col-lg-6 float-start">
+        <label for="etternavn" class="jkl-label--small">Etternavn</label>
+        <input id="etternavn" class="form-control" [(ngModel)]="etternavn" #etternavnValidation="ngModel" placeholder="" [required]="'true'">
+    </div>
+    </div>
+
+
+    <div class="form-group col-12 clearfix">
+        <label for="email" class="jkl-label--small">E-post</label>
+        <input id="email" type="email" class="form-control" [(ngModel)]="email" #emailValidation="ngModel" placeholder="" [required]="'true'">
+        <small class="invalid-text" *ngIf="emailValidation?.touched && emailValidation?.invalid">
+            Epost addressen er ikke gyldig
+        </small>
+    </div>
+
+    <div class="form-group col-12 clearfix">
+        <button class="jkl-button jkl-button--primary jkl-spacing-l--right">kjøp</button>
+        <button class="jkl-button jkl-button--secondary jkl-spacing-l--right">Avbryt</button>
+    </div>
+</div>
