@@ -15,11 +15,11 @@ export class ApiService {
             .pipe(
                 map((response: any) => {
                     return response
+                }),
+                catchError(async error => {
+                    return throwError(error);
                 })
-            ),
-            catchError(async error => {
-                return throwError(error);
-            })
+            )
     }
 
     public get(url: string){

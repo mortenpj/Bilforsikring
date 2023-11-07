@@ -17,11 +17,12 @@ export interface Bonus {
 
 export interface CarInsurance {
     id?: number,
-    insuranceOwner: InsuranceOwner,
+    licenseplate: string,
+    customer: Customer,
     bonus: Bonus;
 }
 
-export interface InsuranceOwner {
+export interface Customer {
     firstName: string,
     lastName: string,
     personalNumber: string,
@@ -29,9 +30,20 @@ export interface InsuranceOwner {
 }
 
 export interface CarInsurancePost {
-
+    id: number;
+    kundeNummer: number;
+    registreringsNummer: string;
+    bonus: number;
+    kunde: CustomerPost;
+    antallAar: number;
 }
 
-export interface InsuranceOwnerPost {
+export interface CustomerPost {
+    fornavn: string;
+    etternavn: string;
+    fodselsNummer: string;
+    epost: string;
+
+
 
 }

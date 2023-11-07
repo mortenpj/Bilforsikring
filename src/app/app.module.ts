@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import { CarInsuranceComponent } from './modules/portal/components/car-insurance/component/car-insurance.component';
+import {CarInsuranceFacade} from "./modules/portal/components/car-insurance/facade/car-insurance.facade";
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,10 +20,11 @@ import { CarInsuranceComponent } from './modules/portal/components/car-insurance
         AppRoutingModule,
         NgbModule,
         NgOptimizedImage,
-        FormsModule
+        FormsModule,
+        HttpClientModule
 
     ],
-  providers: [],
+  providers: [CarInsuranceFacade],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
